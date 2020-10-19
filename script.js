@@ -1,18 +1,26 @@
-(function () {
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-    const hour = document.querySelector('#time #hour');
-    const minute = document.querySelector('#time #minute');
-    const date = document.querySelector('#date');
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-    const current = new Date();
-    const month = months[current.getMonth()];
-    const day = days[current.getDay() - 1];
+const hourElement = document.querySelector('#time #hour');
+const minuteElement = document.querySelector('#time #minute');
+const dateElement = document.querySelector('#date');
 
-    let min = current.getMinutes();
-    min = min <= 9 ? `0${min}` : min;
+// Make the number 2 digit. | 1 to 01, 5 to 05, 15 to 15
+const TwoDigit = (num) => (num <= 9 ? `0${num}` : num);
 
-    hour.textContent = current.getHours();
-    minute.textContent = min;
-    date.innerHTML = `${current.getDate()} ${month}, ${day}`;
-})();
+function Update() {
+    const date = new Date();
+
+    const month = months[date.getMonth()];
+    const day = days[date.getDay() - 1];
+
+    hourElement.textContent = TwoDigit(date.getHours());
+    minuteElement.textContent = TwoDigit(date.getMinutes());
+    dateElement.innerHTML = `${date.getDate()} ${month}, ${day}`;
+}
+
+// Update every 30 seconds
+setInterval(Update, 30000);
+
+// Initialize
+Update();
