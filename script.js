@@ -9,7 +9,10 @@
     const month = months[current.getMonth()];
     const day = days[current.getDay() - 1];
 
+    let min = current.getMinutes();
+    min = min <= 9 ? `0${min}` : min;
+
     hour.textContent = current.getHours();
-    minute.textContent = current.getMinutes();
+    minute.textContent = min;
     date.innerHTML = `${current.getDate()} ${month}, ${day}`;
 })();
