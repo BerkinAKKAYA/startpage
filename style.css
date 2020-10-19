@@ -78,8 +78,14 @@ a:hover::before {
     transform: translateY(-30px) scale(0);
     animation: reveal 0.8s ease forwards;
 }
+.delay200 {
+    animation-delay: 0.2s;
+}
 .delay400 {
     animation-delay: 0.4s;
+}
+.delay600 {
+    animation-delay: 0.6s;
 }
 .delay800 {
     animation-delay: 0.8s;
@@ -89,12 +95,6 @@ a:hover::before {
 }
 .delay1200 {
     animation-delay: 1.2s;
-}
-.delay1400 {
-    animation-delay: 1.4s;
-}
-.delay1600 {
-    animation-delay: 1.6s;
 }
 
 @keyframes blink {
