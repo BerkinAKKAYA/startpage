@@ -1,0 +1,118 @@
+* {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    cursor: default;
+    display: grid;
+    place-items: center;
+}
+
+#time {
+    margin-top: 150px;
+    font-size: 4em;
+    color: #97cdfd;
+    display: flex;
+}
+#time #column {
+    animation: blink 2s infinite;
+}
+
+#date {
+    opacity: 0.5;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+#lists {
+    width: 600px;
+    max-width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 75px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.list h1 {
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    margin-top: 20px;
+    color: #aaa;
+}
+a:hover {
+    color: #fff;
+}
+a::before {
+    content: '> ';
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+a:hover::before {
+    opacity: 1;
+}
+
+.red:hover {
+    color: #f99;
+}
+.green:hover {
+    color: #9f9;
+}
+.blue:hover {
+    color: #99f;
+}
+
+.reveal {
+    transform: translateY(-30px) scale(0);
+    animation: reveal 0.8s ease forwards;
+}
+.delay400 {
+    animation-delay: 0.4s;
+}
+.delay800 {
+    animation-delay: 0.8s;
+}
+.delay1000 {
+    animation-delay: 1s;
+}
+.delay1200 {
+    animation-delay: 1.2s;
+}
+.delay1400 {
+    animation-delay: 1.4s;
+}
+.delay1600 {
+    animation-delay: 1.6s;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+@keyframes reveal {
+    from {
+        transform: translateY(-30px) scale(0);
+    }
+    to {
+        transform: translateY(0) scale(1);
+    }
+}
