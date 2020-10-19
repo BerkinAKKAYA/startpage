@@ -1,6 +1,6 @@
 # Start Page
 
-[Live Demo Here](https://berkinakkaya.github.io/startpage)
+[Live Demo Here](https://berkinakkaya.github.io/startpage/startpage.html)
 
 ### How To Use
 
