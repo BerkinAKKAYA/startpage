@@ -84,6 +84,9 @@ a:hover::before {
 .blue:hover {
     color: #99f;
 }
+.yellow:hover {
+    color: #ff9;
+}
 
 .reveal {
     transform: translateY(-30px) scale(0);
@@ -106,6 +109,9 @@ a:hover::before {
 }
 .delay1200 {
     animation-delay: 1.2s;
+}
+.delay1400 {
+    animation-delay: 1.4s;
 }
 
 @keyframes blink {
