@@ -1,5 +1,7 @@
 # Start Page
 
+![GIF](https://media3.giphy.com/media/1RQaN7jmCdsHkZti0x/giphy.gif)
+
 [Live Demo Here](https://berkinakkaya.github.io/startpage/startpage.html)
 
 ### How To Use
