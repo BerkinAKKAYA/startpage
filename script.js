@@ -1,5 +1,5 @@
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 const hourElement = document.querySelector('#time #hour');
 const minuteElement = document.querySelector('#time #minute');
@@ -12,7 +12,7 @@ function Update() {
     const date = new Date();
 
     const month = months[date.getMonth()];
-    const day = days[date.getDay() - 1];
+    const day = days[date.getDay()];
 
     hourElement.textContent = TwoDigit(date.getHours());
     minuteElement.textContent = TwoDigit(date.getMinutes());
